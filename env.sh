@@ -4,19 +4,21 @@
 
 # Docker
 
-DOCKER_IMAGE_TAG="imx-yocto"
-DOCKER_WORKDIR="/opt/yocto"
+DOCKER_IMAGE_TAG="hnakayam/layerscape-docker:latest"
+DOCKER_WORKDIR=${HOME}"/layerscape-yocto/work"
 
-# Yocto
+# Repo manifest
+# We will use 
+# repo init -u https://source.codeaurora.org/external/qoriq/qoriq-components/yocto-sdk -b dunfell -m default.xml
+# for initialize.
 
-IMX_RELEASE="imx-5.10.35-2.0.0"
+REMOTE="https://source.codeaurora.org/external/qoriq/qoriq-components/yocto-sdk"
+BRANCH="dunefell"
+MANIFEST="default.xml"
 
-YOCTO_DIR="${DOCKER_WORKDIR}/${IMX_RELEASE}-build"
-
-MACHINE="imx8mnevk"
-DISTRO="fsl-imx-xwayland"
-IMAGES="imx-image-core"
-
-REMOTE="https://source.codeaurora.org/external/imx/imx-manifest"
-BRANCH="imx-linux-hardknott"
-MANIFEST=${IMX_RELEASE}".xml"
+# followings are for TEST
+echo "DOCKER_IMAGE_TAG = ${DOCKER_IMAGE_TAG}"
+echo "DOCKER_WORKDIR = ${DOCKER_WORKDIR}"
+echo "REMOTE = ${REMOTE}"
+echo "BRANCH = ${BRANCH}"
+echo "MANIFEST = ${MANIFEST}"
