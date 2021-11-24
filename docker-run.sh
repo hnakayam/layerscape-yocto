@@ -25,8 +25,9 @@
 . ./env.sh
 
 # run the docker image
-docker run -it --rm \
+docker run -it --rm --privileged \
     --volume ${HOME}:${HOME} \
     --volume ${DOCKER_WORKDIR}:${DOCKER_WORKDIR} \
+    --volume /dev:/dev \
     "${DOCKER_IMAGE_TAG}" \
     $1

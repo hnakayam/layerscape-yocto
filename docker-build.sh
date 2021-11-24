@@ -18,7 +18,7 @@ if [ $# -ne 1 ]
     then
         usage
     else
-        docker build --tag "${DOCKER_IMAGE_TAG}" \
+        DOCKER_BUILDKIT=1 docker build --tag "${DOCKER_IMAGE_TAG}" \
                      --build-arg "DOCKER_WORKDIR=${DOCKER_WORKDIR}" \
                      --build-arg "USER=$(whoami)" \
                      --build-arg "host_uid=$(id -u)" \
