@@ -17,7 +17,7 @@
   <project name="poky" path="sources/poky" remote="yocto" revision="943ef2fad8428f002850e3655a3312e13d0dcb2c"/>
   <project name="qoriq/qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="nxp" revision="5c2417905c9df08d6b0a6433539c5e32622890f0">
   </project>
-  <project name="hnakayam/meta-sample" path="sources/meta-sample" remote="git" revision="dunfell">
+  <project name="hnakayam/meta-sample" path="sources/meta-sample" remote="github" revision="dunfell">
     <copyfile src="tools/setup-env" dest="setup-env"/>
   </project>
 </manifest>
